@@ -1,0 +1,17 @@
+///****ROUTES Folder***** */
+const express = require('express');//leveraging express code
+const router = express.Router();  //Router object - Router is a built in function and is using the "new" 
+// keyword so we don't have to say new router
+const housesCtrl = require('../controllers/houses');
+
+
+
+//Routes to houses requests
+router.get('/', housesCtrl.index);
+
+
+router.get('/:id', housesCtrl.show);
+
+
+
+module.exports = router;  
